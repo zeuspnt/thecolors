@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75ECF9E11B31A5050090B168 /* dung.png in Resources */ = {isa = PBXBuildFile; fileRef = 75ECF9DF1B31A5050090B168 /* dung.png */; };
+		75ECF9E21B31A5050090B168 /* dung@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75ECF9E01B31A5050090B168 /* dung@2x.png */; };
+		75ECF9E51B31A5870090B168 /* sai.png in Resources */ = {isa = PBXBuildFile; fileRef = 75ECF9E31B31A5870090B168 /* sai.png */; };
+		75ECF9E61B31A5870090B168 /* sai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75ECF9E41B31A5870090B168 /* sai@2x.png */; };
 		75F9487E1B2F1E6000AE9557 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9487D1B2F1E6000AE9557 /* Foundation.framework */; };
 		75F948801B2F1E6000AE9557 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9487F1B2F1E6000AE9557 /* CoreGraphics.framework */; };
 		75F948821B2F1E6000AE9557 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F948811B2F1E6000AE9557 /* UIKit.framework */; };
@@ -21,8 +25,9 @@
 		75F9489F1B2F1E6000AE9557 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F948811B2F1E6000AE9557 /* UIKit.framework */; };
 		75F948A71B2F1E6000AE9557 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75F948A51B2F1E6000AE9557 /* InfoPlist.strings */; };
 		75F948A91B2F1E6000AE9557 /* TheColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F948A81B2F1E6000AE9557 /* TheColorsTests.m */; };
-		75F948B51B2F204900AE9557 /* dung.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F948B31B2F204900AE9557 /* dung.png */; };
-		75F948B61B2F204900AE9557 /* sai.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F948B41B2F204900AE9557 /* sai.png */; };
+		75FE60CF1B30549E0035AB8B /* GameOverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE60CE1B30549E0035AB8B /* GameOverVC.m */; };
+		75FE60D11B305E6E0035AB8B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FE60D01B305E6E0035AB8B /* iAd.framework */; };
+		75FE60D41B3062410035AB8B /* WellComeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE60D31B3062410035AB8B /* WellComeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75ECF9DF1B31A5050090B168 /* dung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dung.png; sourceTree = "<group>"; };
+		75ECF9E01B31A5050090B168 /* dung@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dung@2x.png"; sourceTree = "<group>"; };
+		75ECF9E31B31A5870090B168 /* sai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sai.png; sourceTree = "<group>"; };
+		75ECF9E41B31A5870090B168 /* sai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sai@2x.png"; sourceTree = "<group>"; };
 		75F9487A1B2F1E6000AE9557 /* TheColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F9487D1B2F1E6000AE9557 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		75F9487F1B2F1E6000AE9557 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +64,11 @@
 		75F948A41B2F1E6000AE9557 /* TheColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheColorsTests-Info.plist"; sourceTree = "<group>"; };
 		75F948A61B2F1E6000AE9557 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75F948A81B2F1E6000AE9557 /* TheColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheColorsTests.m; sourceTree = "<group>"; };
-		75F948B31B2F204900AE9557 /* dung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dung.png; sourceTree = "<group>"; };
-		75F948B41B2F204900AE9557 /* sai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sai.png; sourceTree = "<group>"; };
+		75FE60CD1B30549E0035AB8B /* GameOverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverVC.h; sourceTree = "<group>"; };
+		75FE60CE1B30549E0035AB8B /* GameOverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverVC.m; sourceTree = "<group>"; };
+		75FE60D01B305E6E0035AB8B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		75FE60D21B3062410035AB8B /* WellComeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellComeVC.h; sourceTree = "<group>"; };
+		75FE60D31B3062410035AB8B /* WellComeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellComeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FE60D11B305E6E0035AB8B /* iAd.framework in Frameworks */,
 				75F948801B2F1E6000AE9557 /* CoreGraphics.framework in Frameworks */,
 				75F948821B2F1E6000AE9557 /* UIKit.framework in Frameworks */,
 				75F9487E1B2F1E6000AE9557 /* Foundation.framework in Frameworks */,
@@ -105,6 +118,7 @@
 		75F9487C1B2F1E6000AE9557 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75FE60D01B305E6E0035AB8B /* iAd.framework */,
 				75F9487D1B2F1E6000AE9557 /* Foundation.framework */,
 				75F9487F1B2F1E6000AE9557 /* CoreGraphics.framework */,
 				75F948811B2F1E6000AE9557 /* UIKit.framework */,
@@ -119,6 +133,10 @@
 				75F9488C1B2F1E6000AE9557 /* AppDelegate.h */,
 				75F9488D1B2F1E6000AE9557 /* AppDelegate.m */,
 				75F9488F1B2F1E6000AE9557 /* Main.storyboard */,
+				75FE60D21B3062410035AB8B /* WellComeVC.h */,
+				75FE60D31B3062410035AB8B /* WellComeVC.m */,
+				75FE60CD1B30549E0035AB8B /* GameOverVC.h */,
+				75FE60CE1B30549E0035AB8B /* GameOverVC.m */,
 				75F948921B2F1E6000AE9557 /* ViewController.h */,
 				75F948931B2F1E6000AE9557 /* ViewController.m */,
 				75F948951B2F1E6000AE9557 /* Images.xcassets */,
@@ -160,8 +178,10 @@
 		75F948B21B2F203100AE9557 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				75F948B31B2F204900AE9557 /* dung.png */,
-				75F948B41B2F204900AE9557 /* sai.png */,
+				75ECF9DF1B31A5050090B168 /* dung.png */,
+				75ECF9E01B31A5050090B168 /* dung@2x.png */,
+				75ECF9E31B31A5870090B168 /* sai.png */,
+				75ECF9E41B31A5870090B168 /* sai@2x.png */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -213,6 +233,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					75F948791B2F1E6000AE9557 = {
+						DevelopmentTeam = P8T8E74675;
+					};
 					75F9489A1B2F1E6000AE9557 = {
 						TestTargetID = 75F948791B2F1E6000AE9557;
 					};
@@ -243,10 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F948961B2F1E6000AE9557 /* Images.xcassets in Resources */,
-				75F948B51B2F204900AE9557 /* dung.png in Resources */,
-				75F948B61B2F204900AE9557 /* sai.png in Resources */,
+				75ECF9E11B31A5050090B168 /* dung.png in Resources */,
 				75F948881B2F1E6000AE9557 /* InfoPlist.strings in Resources */,
+				75ECF9E51B31A5870090B168 /* sai.png in Resources */,
+				75ECF9E21B31A5050090B168 /* dung@2x.png in Resources */,
 				75F948911B2F1E6000AE9557 /* Main.storyboard in Resources */,
+				75ECF9E61B31A5870090B168 /* sai@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +292,9 @@
 			files = (
 				75F948941B2F1E6000AE9557 /* ViewController.m in Sources */,
 				75F9488E1B2F1E6000AE9557 /* AppDelegate.m in Sources */,
+				75FE60CF1B30549E0035AB8B /* GameOverVC.m in Sources */,
 				75F9488A1B2F1E6000AE9557 /* main.m in Sources */,
+				75FE60D41B3062410035AB8B /* WellComeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,11 +419,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheColors/TheColors-Prefix.pch";
 				INFOPLIST_FILE = "TheColors/TheColors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,11 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheColors/TheColors-Prefix.pch";
 				INFOPLIST_FILE = "TheColors/TheColors-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +507,7 @@
 				75F948AE1B2F1E6000AE9557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75F948AF1B2F1E6000AE9557 /* Build configuration list for PBXNativeTarget "TheColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +516,7 @@
 				75F948B11B2F1E6000AE9557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

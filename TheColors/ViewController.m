@@ -7,15 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "GameOverVC.h"
+#import <iAd/iAd.h>
 
-@interface ViewController (){
+CGFloat const kTotalSec = 2.f;
+
+@interface ViewController ()<ADBannerViewDelegate>{
     
     __weak IBOutlet UIProgressView *_progressBar;
     __weak IBOutlet UILabel *_lblTheColors;
     
+    __weak IBOutlet UIButton *_btnYes;
+    __weak IBOutlet UIButton *_btnNo;
     NSTimer *_timer;
     NSArray *_arrayColors, *_arrayColorsName;
     BOOL _result;
+    NSInteger _score;
+    CGFloat _sec;
+    
+    ADBannerView *_adView;
 }
 
 @end
@@ -27,18 +37,30 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    
-    
+    _btnYes.layer.masksToBounds = YES;
+    _btnYes.layer.cornerRadius = 5.f;
+    _btnNo.layer.masksToBounds = YES;
+    _btnNo.layer.cornerRadius = 5.f;
     
     _arrayColors = @[[UIColor blackColor],[UIColor grayColor],[UIColor redColor],[UIColor greenColor],[UIColor blueColor],[UIColor cyanColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor],[UIColor brownColor]];
     
     _arrayColorsName = @[@"Black",@"Gray",@"Red",@"Green",@"Blue",@"Cyan",@"Yellow",@"Magenta",@"Orange",@"Purple",@"Brown"];
     NSLog(@"%d - %d", _arrayColorsName.count, _arrayColors.count);
-    
-    [self startGame];
+    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+    _adView.delegate = self;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+    [self startGame];
+    
+    
+}
+
+
 - (void)randomColor:(BOOL)right{
+    
     if (right) {
         NSInteger i = arc4random() % _arrayColors.count;
         _lblTheColors.textColor = [_arrayColors objectAtIndex:i];
@@ -57,8 +79,21 @@
     }
 }
 
+- (void)next{
+    _sec = kTotalSec;
+    _progressBar.progress = 1.f;
+    _score ++;
+    NSInteger ran = arc4random() % 2;
+    if (ran == 0) {
+        [self randomColor:YES];
+    } else {
+        [self randomColor:NO];
+    }
+}
+
 - (void)tick{
-    _progressBar.progress -=0.01f;
+    _sec -= 0.01f;
+    _progressBar.progress = _sec/kTotalSec;
     if (_progressBar.progress == 0) {
         //Game Over
         [self endGame];
@@ -66,7 +101,9 @@
 }
 
 - (void)startGame{
-    _progressBar.progress = 1.f;
+    _score = 0;
+    _sec = kTotalSec;
+    _progressBar.progress = 1;
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.01f target:self selector:@selector(tick) userInfo:nil repeats:YES];
     [self randomColor:NO];
 }
@@ -75,6 +112,11 @@
     _progressBar.progress = 0;
     [_timer invalidate];
     _timer = nil;
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    GameOverVC *vc = [sb instantiateViewControllerWithIdentifier:@"GameOverVC"];
+    vc.score = _score;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,7 +126,32 @@
 }
 
 - (IBAction)btnYesTapped:(id)sender {
+    if (_result) {
+        [self next];
+    } else {
+        [self endGame];
+    }
 }
 - (IBAction)btnNoTapped:(id)sender {
+    if (!_result) {
+        [self next];
+    } else {
+        [self endGame];
+    }
+}
+
+#pragma mark - iAD Delegate
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    if (_adView.superview == nil)
+    {
+        [self.view addSubview:_adView];
+    } else {
+        [_adView removeFromSuperview];
+        [self.view addSubview:_adView];
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    NSLog(@"Error: %@", error.localizedDescription);
 }
 @end
