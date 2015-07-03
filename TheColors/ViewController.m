@@ -45,7 +45,7 @@ CGFloat const kTotalSec = 2.f;
     _arrayColors = @[[UIColor blackColor],[UIColor grayColor],[UIColor redColor],[UIColor greenColor],[UIColor blueColor],[UIColor cyanColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor],[UIColor brownColor]];
     
     _arrayColorsName = @[@"Black",@"Gray",@"Red",@"Green",@"Blue",@"Cyan",@"Yellow",@"Magenta",@"Orange",@"Purple",@"Brown"];
-    NSLog(@"%d - %d", _arrayColorsName.count, _arrayColors.count);
+
     _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
     _adView.delegate = self;
 }
