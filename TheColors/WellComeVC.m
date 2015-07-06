@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *a = [[NSArray alloc] init];
+    NSLog(@"%@", a[1]);
 }
 
 -(void)viewDidAppear:(BOOL)animated{
