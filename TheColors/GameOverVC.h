@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameOverVC : UIViewController
+@interface GameOverVC : ParentVC
 
 @property (assign, nonatomic) NSInteger score;
 

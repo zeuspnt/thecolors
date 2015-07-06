@@ -25,7 +25,7 @@ CGFloat const kTotalSec = 2.f;
     NSInteger _score;
     CGFloat _sec;
     
-    ADBannerView *_adView;
+//    ADBannerView *_adView;
 }
 
 @end
@@ -46,8 +46,8 @@ CGFloat const kTotalSec = 2.f;
     
     _arrayColorsName = @[@"Black",@"Gray",@"Red",@"Green",@"Blue",@"Cyan",@"Yellow",@"Magenta",@"Orange",@"Purple",@"Brown"];
 
-    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
-    _adView.delegate = self;
+//    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+//    _adView.delegate = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -140,18 +140,18 @@ CGFloat const kTotalSec = 2.f;
     }
 }
 
-#pragma mark - iAD Delegate
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    if (_adView.superview == nil)
-    {
-        [self.view addSubview:_adView];
-    } else {
-        [_adView removeFromSuperview];
-        [self.view addSubview:_adView];
-    }
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"Error: %@", error.localizedDescription);
-}
+//#pragma mark - iAD Delegate
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
+//    if (_adView.superview == nil)
+//    {
+//        [self.view addSubview:_adView];
+//    } else {
+//        [_adView removeFromSuperview];
+//        [self.view addSubview:_adView];
+//    }
+//}
+//
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+//    NSLog(@"Error: %@", error.localizedDescription);
+//}
 @end

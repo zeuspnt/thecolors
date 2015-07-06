@@ -10,7 +10,7 @@
 #import <iAd/iAd.h>
 
 @interface WellComeVC ()<ADBannerViewDelegate>{
-    ADBannerView *_adView;
+//    ADBannerView *_adView;
 }
 
 @end
@@ -35,8 +35,8 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
     
-    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
-    _adView.delegate = self;
+//    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
+//    _adView.delegate = self;
 }
 
 /*
@@ -49,20 +49,20 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark - iAD Delegate
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    if (_adView.superview == nil)
-    {
-        [self.view addSubview:_adView];
-    } else {
-        [_adView removeFromSuperview];
-        [self.view addSubview:_adView];
-    }
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"Error: %@", error.localizedDescription);
-}
+//
+//#pragma mark - iAD Delegate
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
+//    if (_adView.superview == nil)
+//    {
+//        [self.view addSubview:_adView];
+//    } else {
+//        [_adView removeFromSuperview];
+//        [self.view addSubview:_adView];
+//    }
+//}
+//
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+//    NSLog(@"Error: %@", error.localizedDescription);
+//}
 
 @end

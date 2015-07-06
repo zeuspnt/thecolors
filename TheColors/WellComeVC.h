@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WellComeVC : UIViewController
+@interface WellComeVC : ParentVC
 
 @end
